@@ -463,13 +463,29 @@ const TimelineSection = ({ isDesktop }: IDesktop) => {
       className="max-w-full h-96 shadow-xl bg-gray-800 rounded-2xl overflow-hidden"
       ref={screenContainer}
     >
-      <Image
-        className="w-full h-8"
-        src="/timeline/title-bar.svg"
-        alt="Title bar"
-        width={644}
-        height={34}
-      />
+      <svg width="600" height="60" viewBox="0 0 600 60" xmlns="http://www.w3.org/2000/svg">
+ 
+  <rect x="10" y="10" rx="15" ry="15" width="580" height="40" fill="#1F2A44" />
+  
+  
+  <circle cx="50" cy="30" r="6" fill="#FFF" />
+  <rect x="47" y="30" width="6" height="8" fill="#FFF" />
+
+  
+  <text x="70" y="35" font-family="Poppins" font-size="14" fill="white">
+    Trinity International School and College
+  </text>
+
+ 
+  {/* <circle cx="260" cy="30" r="6" stroke="white" stroke-width="2" fill="none"/>
+  <path d="M 258 26 L 263 26 L 263 31" stroke="white" stroke-width="2" fill="none"/> */}
+
+  
+  {/* <circle cx="520" cy="30" r="4" fill="white"/> */}
+  {/* <line x1="520" y1="30" x2="540" y2="20" stroke="white" stroke-width="2"/> */}
+  {/* <circle cx="540" cy="20" r="4" fill="white"/> */}
+</svg>
+
       <div className="relative h-full w-full -mt-2">
         <div className="absolute top-0 left-0 h-full w-full">
           {svgCheckpointItems.map((item, index) => (
@@ -511,7 +527,7 @@ const TimelineSection = ({ isDesktop }: IDesktop) => {
   return (
     <section
       className="w-full relative select-none min-h-screen section-container py-8 flex flex-col justify-center"
-      id={MENULINKS[3].ref}
+      id={MENULINKS[1].ref}
     >
       {renderSectionTitle()}
       <div className="grid grid-cols-12 gap-4 mt-20">

@@ -46,13 +46,13 @@ const ProjectTile = ({
       <div className="flex flex-col pb-8">
         {techStack.map((tech, i) => (
           <div className={`${i % 2 === 0 && "ml-16"} mb-4`} key={tech}>
-            <Image
+            {/* <Image
               src={`/projects/tech/${tech}.svg`}
               alt={tech}
-              height={45}
+              height={80}
               objectFit="contain"
-              width={45}
-            />
+              width={80}
+            /> */}
           </div>
         ))}
       </div>
@@ -106,6 +106,9 @@ const ProjectTile = ({
       alt={name}
       layout="fill"
       className={`${styles.ProjectImg} z-0`}
+      // height={80}
+             
+              // width={80}
     />
   );
 

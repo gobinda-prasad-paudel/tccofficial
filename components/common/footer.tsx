@@ -57,7 +57,7 @@ const Footer = () => {
     </>
   );
 
-  const { ref: footerRef } = MENULINKS[4];
+  const { ref: footerRef } = MENULINKS[1];
 
   return (
     <footer

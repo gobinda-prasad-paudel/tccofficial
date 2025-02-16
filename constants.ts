@@ -18,23 +18,25 @@ export const MENULINKS = [
     ref: "home",
   },
   {
-    name: "Works",
-    ref: "works",
+    name: "Timeline",
+    ref: "timeline",
+  },
+  /*
+  {
+   name: "Works",
+   ref: "works",
   },
   {
     name: "Skills",
     ref: "skills",
-  },
-  {
-    name: "Timeline",
-    ref: "timeline",
-  },
+    },
   {
     name: "Contact",
     ref: "contact",
   },
-];
-
+  */
+]; 
+ 
 export const TYPED_STRINGS = [
   "We explore the latest in computer technology",
   "We foster innovation and creativity in tech",
@@ -68,10 +70,11 @@ export interface IProject {
 
 export const PROJECTS: IProject[] = [
   {
-    name: "Project One",
-    image: "/projects/figgen.jpg",
-    blurImage: "/projects/blur/figgen-blur.jpg",
-    description: "Innovative app for seamless task management.",
+    name: "EduCare",
+    image: "/projects/project1.jpg",
+    blurImage: "/projects/project1.jpg",
+    // blurImage: "/projects/blur/figgen-blur.jpg",
+    description: "Innovative app for emergency medical service.",
     gradient: ["#1F6582", "#1ABCFE"],
     url: "/",
     tech: ["typescript", "figma", "tailwind"],
@@ -214,44 +217,64 @@ export enum ItemSize {
 
 export const TIMELINE: Array<TimelineNodeV2> = [
   {
+    type: NodeTypes.DIVERGE,
+  },
+  {
+    type: NodeTypes.CHECKPOINT,
+    title: "Battle with Codes",
+    size: ItemSize.SMALL,
+    subtitle:
+      "Organised Battle with Codes in Trinity Interational College",
+    image: "/timeline/trinity_international_college.png",
+    slideImage: "/timeline/project2.jpg",
+    shouldDrawLine: true,
+    alignment: Branch.LEFT,
+  },
+  {
+    type: NodeTypes.CHECKPOINT,
+    title: "Winner of Trinity Intra College IT Competition",
+    size: ItemSize.SMALL,
+    subtitle:
+      "Built EduCare for better emergency medical response .",
+    image: "/timeline/trinity_international_college.png",
+    slideImage: "/timeline/project1.jpg",
+    shouldDrawLine: true,
+    alignment: Branch.LEFT,
+  },
+  {
+    type: NodeTypes.CHECKPOINT,
+    title: "2025",
+    size: ItemSize.LARGE,
+    shouldDrawLine: true,
+    alignment: Branch.LEFT,
+  },
+  {
+    type: NodeTypes.CONVERGE,
+  },
+  
+  /* {
+    type: NodeTypes.CHECKPOINT,
+    title: "XYZ event",
+    size: ItemSize.SMALL,
+    subtitle:
+      "Organised xyz event",
+    image: "/timeline/hotstar.svg",
+    slideImage: "/timeline/hotstar.jpeg",
+    shouldDrawLine: true,
+    alignment: Branch.LEFT,
+  },
+  
+  {
     type: NodeTypes.CHECKPOINT,
     title: "2023",
     size: ItemSize.LARGE,
     shouldDrawLine: false,
     alignment: Branch.LEFT,
   },
-  {
-    type: NodeTypes.CHECKPOINT,
-    title: "Speaker at React India",
-    size: ItemSize.SMALL,
-    subtitle:
-      "Discussed on Interaction to Next Paint (INP), a Google Core Web Vital metric",
-    image: "/timeline/reactindia.svg",
-    slideImage: "/timeline/reactindia.jpg",
-    shouldDrawLine: true,
-    alignment: Branch.LEFT,
-  },
+  
   {
     type: NodeTypes.CHECKPOINT,
     title: "2022",
-    size: ItemSize.LARGE,
-    shouldDrawLine: false,
-    alignment: Branch.LEFT,
-  },
-  {
-    type: NodeTypes.CHECKPOINT,
-    title: "Frontend Engineer 2 (Current)",
-    size: ItemSize.SMALL,
-    subtitle:
-      "Frontend Engineering @ Core team, solving problems around Livingroom device performance",
-    image: "/timeline/hotstar.svg",
-    slideImage: "/timeline/hotstar.jpeg",
-    shouldDrawLine: true,
-    alignment: Branch.LEFT,
-  },
-  {
-    type: NodeTypes.CHECKPOINT,
-    title: "2021",
     size: ItemSize.LARGE,
     shouldDrawLine: false,
     alignment: Branch.LEFT,
@@ -269,7 +292,7 @@ export const TIMELINE: Array<TimelineNodeV2> = [
   },
   {
     type: NodeTypes.CHECKPOINT,
-    title: "2020",
+    title: "2021",
     size: ItemSize.LARGE,
     shouldDrawLine: false,
     alignment: Branch.LEFT,
@@ -300,8 +323,8 @@ export const TIMELINE: Array<TimelineNodeV2> = [
   },
   {
     type: NodeTypes.CONVERGE,
-  },
-  {
+  }, */
+  /* {
     type: NodeTypes.CHECKPOINT,
     title: "2019",
     size: ItemSize.LARGE,
@@ -480,6 +503,7 @@ export const TIMELINE: Array<TimelineNodeV2> = [
     shouldDrawLine: true,
     alignment: Branch.LEFT,
   },
+   */
 ];
 
 export type TimelineNodeV2 = CheckpointNode | BranchNode;
